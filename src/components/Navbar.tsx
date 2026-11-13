@@ -15,7 +15,8 @@ import {
   User,
   PlusCircle,
   LogOut,
-  ChevronDown
+  ChevronDown,
+  Sparkles
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { NotificationDropdown } from './NotificationDropdown';
@@ -65,6 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navLinks = [
     { id: 'home', label: 'Home', icon: null },
     { id: 'browse', label: 'Browse', icon: <Compass className="w-4 h-4" /> },
+    { id: 'seasonal', label: 'Seasonal', icon: <Sparkles className="w-4 h-4 text-amber-400" /> },
     { id: 'schedule', label: 'Schedule', icon: <Calendar className="w-4 h-4" /> },
     { id: 'events', label: 'Arena & Debates', icon: <Flame className="w-4 h-4 text-rose-400" /> },
     { id: 'community', label: 'Community', icon: <MessageSquare className="w-4 h-4" /> },

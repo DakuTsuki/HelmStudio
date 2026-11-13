@@ -12,6 +12,7 @@ import { Footer } from './components/Footer';
 
 import { HomePage } from './pages/HomePage';
 import { BrowsePage } from './pages/BrowsePage';
+import { SeasonalPage } from './pages/SeasonalPage';
 import { SchedulePage } from './pages/SchedulePage';
 import { EventsPage } from './pages/EventsPage';
 import { CommunityPage } from './pages/CommunityPage';
@@ -111,6 +112,9 @@ const MainApp: React.FC = () => {
         )}
         {currentView === 'browse' && (
           <BrowsePage onSelectAnime={handleSelectAnime} />
+        )}
+        {currentView === 'seasonal' && (
+          <SeasonalPage onSelectAnime={handleSelectAnime} onNavigate={setCurrentView} />
         )}
         {currentView === 'schedule' && (
           <SchedulePage onSelectAnime={handleSelectAnime} />
